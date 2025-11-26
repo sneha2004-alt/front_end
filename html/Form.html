@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+     <form style ="color:blue;background-color:rgb(239, 239, 99)";>
+</head>
+<body>
+    <form >
+        <fieldset>
+            <legend >form</legend>
+            <label for="user">user name</label> <br>
+            <input id="user" type="text" placeholder="enter your name..." required> 
+            <br><br> 
+        <fieldset>
+        <legend>Gender</legend>
+        <label for="">male</label>
+        <input type="radio">
+        <label for="">female</label>
+        <input type="radio">
+        </fieldset>
+        <br><br>
+        <input type="time"><br>
+        <input type="date"><br>
+        <input type="checkbox">
+    <br><br>
+
+    <fieldset>
+            <legend>Country</legend>
+    <select value="">
+        <option value="india">india</option>
+        <option value="china">china</option>
+        <option value="Europe">Europe</option>
+        <option value="USA">USA</option>
+        <option value="Pakistan">Pakistan</option>
+     </select>
+     <br> <br>
+     
+     <input type="search"list="data_list">
+     <datalist id="data_list">
+        <option value="india">india</option>
+        <option value="china">china</option>
+        <option value="Europe">Europe</option>
+        <option value="USA">USA</option>
+        <option value="Pakistan">Pakistan</option>
+        </datalist>
+     <br>
+     </fieldset><br>
+     
+
+     <label for="address">address</label>
+     <textarea minlength="4" maxlength="20" id="address" cols="20" rows="2"></textarea>   
+    <br><br>
+    <input type="submit">
+    <input type="button" value="button">
+<button>click me</button>
+</fieldset> 
+</form>
+</body>
+</html>
