@@ -1,0 +1,24 @@
+:root {
+    --width_1:300px;
+    --height_1:250px;
+
+    --width_2: 150px;
+    --height_2:50px;
+
+    --primary_color:rgba(0,0,0,1)
+}
+
+.container{
+    width:100px;
+    height:90vh;
+    background-color:red; 
+
+}
+
+h1{
+    border:2px solid gray;
+    padding:20px;
+    margin:20px;
+
+    width:abs(calc(var(--width_2)-var(--width_1)+var(--height_2)));
+}

@@ -1,0 +1,14 @@
+.text {
+    color: tomato;
+    background-color: teal;
+}
+
+.container {
+    width: 80%;
+    height: 80vb;
+    background-image: url("../cat-7287671_1280.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid red;
+}
