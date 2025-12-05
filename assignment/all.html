@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini HTML Project</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background: #f3f3f3;
+        }
+
+        header{
+            background: teal;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul{
+            display: flex;
+            background: #222;
+            padding: 10px;
+            list-style: none;
+        }
+        nav ul li{
+            margin-right: 20px;
+        }
+        nav ul li a{
+            color:white;
+            text-decoration: none;
+        }
+
+        section{
+            padding: 20px;
+        }
+
+        .box{
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        /* Responsive */
+        @media(max-width:600px){
+            nav ul{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My HTML Project</h1>
+    <p><mark>Learning All HTML Topics</mark></p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#media">Media</a></li>
+    </ul>
+</nav>
+
+<!-- INTRODUCTION -->
+<section id="intro" class="box">
+    <h2>HTML Basics</h2>
+    <p>This is a simple <b>HTML5</b> project. HTML5 uses semantic tags like 
+        <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, 
+        <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>.
+    </p>
+
+    <pre>
+This is preformatted text.
+It keeps   spaces and
+line breaks exactly the same.
+    </pre>
+
+    <hr>
+
+    <h3>Image Example</h3>
+    <img src="back_image.svg" alt="Sample SVG Image" width="200">
+
+    <p>Here is a quotation example:</p>
+    <blockquote>“HTML is the structure of every website.”</blockquote>
+</section>
+
+<!-- LISTS -->
+<section id="lists" class="box">
+    <h2>HTML Lists</h2>
+
+    <h3>Ordered List</h3>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Frontend</li>
+        <li>Backend</li>
+        <li>Database</li>
+    </ul>
+</section>
+
+<!-- TABLE -->
+<section id="table" class="box">
+    <h2>HTML Table</h2>
+
+    <table>
+        <tr>
+            <th>Language</th>
+            <th>Use</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Structure</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Styling</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Programming</td>
+        </tr>
+    </table>
+</section>
+
+<!-- FORM -->
+<section id="form" class="box">
+    <h2>HTML Form</h2>
+
+    <form>
+        Full Name: <input type="text" required minlength="3" maxlength="20"><br><br>
+
+        Email: <input type="email" required><br><br>
+
+        Password: <input type="password" required minlength="5"><br><br>
+
+        Gender:
+        <input type="radio" name="g"> Male
+        <input type="radio" name="g"> Female<br><br>
+
+        Hobbies:
+        <input type="checkbox"> Music
+        <input type="checkbox"> Sports<br><br>
+
+        Date of Birth: <input type="date"><br><br>
+
+        Select Time: <input type="time"><br><br>
+
+        Country:
+        <select>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+        </select><br><br>
+
+        Address:
+        <textarea rows="3"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- MEDIA -->
+<section id="media" class="box">
+    <h2>Media Elements</h2>
+
+    <h3>Figure, Image & Caption</h3>
+    <figure>
+        <img src="back_image.svg" alt="SVG Example" width="200">
+        <figcaption>Sample Figure with Caption</figcaption>
+    </figure>
+
+    <h3>Video</h3>
+    <video width="300" controls>
+        <source src="sample.mp4" type="video/mp4">
+    </video>
+
+    <h3>Iframe (Google Map)</h3>
+    <iframe 
+        src="https://maps.google.com/maps?q=india&t=&z=9&ie=UTF8&iwloc=&output=embed" 
+        width="300" height="200">
+    </iframe>
+
+    <h3>SVG Example</h3>
+    <svg width="200" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" fill="yellow" />
+    </svg>
+
+    <h3>Canvas Example</h3>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid black;"></canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillRect(20,20,150,50);
+    </script>
+
+    <h3>HTML Marquee</h3>
+    <marquee>Welcome to My HTML Project!</marquee>
+
+    <h3>HTML Variables</h3>
+    <p>The price is <var>x</var> + <var>y</var>.</p>
+</section>
+
+<footer style="background:#222;color:white;text-align:center;padding:10px;">
+    © 2025 My HTML Project
+</footer>
+
+</body>
+</html>
