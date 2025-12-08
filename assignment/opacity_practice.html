@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opacity</title>
+    <title>Opacity & Skew Hover</title>
 
     <style>
         img {
             opacity: 0.2;
             transition: opacity 0.3s ease-in-out;
             width: 50%;
-            height: auto;
             display: block;
             margin: 20px auto;
         }
@@ -32,38 +31,38 @@
             height: 100px;
             background-color: teal;
             margin: 20px auto;
-            text-align: center;
-            line-height: 100px;
             color: white;
             font-weight: bold;
+            line-height: 100px;
+            transition: transform 0.4s ease, background-color 0.4s ease;
+            cursor: pointer;
         }
 
         .skew-X {
             transform: skewX(20deg);
         }
+
         .skew-X:hover {
             transform: skewX(40deg) scale(1.1);
             background-color: crimson;
-            rotate: 20deg; 
         }
-
 
         .skew-Y {
             transform: skewY(20deg);
         }
+
         .skew-Y:hover {
             transform: skewY(40deg) scale(1.1);
             background-color: darkorange;
-            rotate: 40deg;
         }
 
         .skew {
-            transform: skew(40deg, 30deg);
+            transform: skew(30deg, 15deg);
         }
+
         .skew:hover {
             transform: skew(50deg, 30deg) scale(1.1);
             background-color: purple;
-            rotate: 80deg;
         }
     </style>
 </head>
@@ -72,9 +71,9 @@
     <img src="./gold-heart-7000551_1280.jpg" alt="logo">
 
     <div class="main">
-        <div class="box skew-X">skew X</div>
-        <div class="box skew-Y">skew Y</div>
-        <div class="box skew">skew</div>
+        <div class="box skew-X">Skew X</div>
+        <div class="box skew-Y">Skew Y</div>
+        <div class="box skew">Skew</div>
     </div>
 
 </body>

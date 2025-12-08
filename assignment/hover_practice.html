@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All CSS Pseudo Classes & Elements</title>
+
+<style>
+/* ---------------- BASIC ---------------- */
+body {
+    background-color: blue;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* ---------------- IMAGE ---------------- */
+img {
+    width: 200px;
+    opacity: 0.3;
+    transition: 0.3s;
+    border: 5px solid white;
+}
+
+/* pseudo-classes */
+img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+img:active {
+    border-color: yellow;
+}
+
+img:focus {
+    outline: 4px solid red;
+}
+
+/* ---------------- LINKS ---------------- */
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: pink;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: orange;
+}
+
+/* ---------------- LIST ---------------- */
+li:first-child {
+    color: yellow;
+}
+
+li:last-child {
+    color: orange;
+}
+
+li:nth-child(2) {
+    color: lightgreen;
+}
+
+/* ---------------- PARAGRAPH ---------------- */
+p:first-child {
+    font-weight: bold;
+}
+
+/* ---------------- FORM ---------------- */
+input:focus {
+    outline: 3px solid yellow;
+}
+
+input:disabled {
+    background: gray;
+}
+
+input:enabled {
+    background: white;
+}
+
+input:checked {
+    width: 20px;
+    height: 20px;
+}
+
+/* ---------------- BUTTON ---------------- */
+button:hover {
+    background: yellow;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+/* ---------------- NOT ---------------- */
+div:not(.box) {
+    margin-top: 10px;
+}
+
+/* ---------------- PSEUDO ELEMENTS ---------------- */
+
+/* ::before */
+h2::before {
+    content: "🔥 ";
+}
+
+/* ::after */
+h2::after {
+    content: " ✅";
+}
+
+/* ::first-line */
+p::first-line {
+    color: yellow;
+}
+
+/* ::first-letter */
+p::first-letter {
+    font-size: 30px;
+}
+
+/* ::selection */
+::selection {
+    background: yellow;
+    color: black;
+}
+
+/* ::marker */
+li::marker {
+    color: red;
+}
+
+/* ::placeholder */
+input::placeholder {
+    color: red;
+}
+</style>
+</head>
+
+<body>
+
+<h2>CSS Pseudo Classes & Elements</h2>
+
+<!-- IMAGE -->
+<img src="./gold-heart-7000551_1280.jpg" alt="Image" tabindex="0">
+
+<br><br>
+
+<!-- LINK -->
+<a href="#">Sample Link</a>
+
+<br><br>
+
+<!-- LIST -->
+<ul>
+    <li>First Item</li>
+    <li>Second Item</li>
+    <li>Last Item</li>
+</ul>
+
+<!-- PARAGRAPH -->
+<p>This paragraph demonstrates first-line, first-letter and selection pseudo elements.</p>
+
+<!-- FORM -->
+<input type="text" placeholder="Focus me"><br><br>
+<input type="checkbox" checked><br><br>
+<input type="text" disabled value="Disabled Field">
+
+<br><br>
+
+<!-- BUTTON -->
+<button>Click Me</button>
+
+<br><br>
+
+<!-- NOT -->
+<div class="box">Box Div</div>
+<div>Normal Div</div>
+
+</body>
+</html>
