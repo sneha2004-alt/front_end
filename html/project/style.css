@@ -1,179 +1,21 @@
-* {
+/* Remove default margin & padding */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 
-body {
-    background: #f8f3e7;
-}
-
-/* HEADER */
-.header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: #0f6f6d;
-    color: white;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 25px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* HERO with your SVG background */
-.hero {
-    position: relative;
-    padding: 120px 50px;
-    background: url("back_image.svg");
-    background-size: cover;
-    background-position: center;
+/* Full-page background */
+body{
+    min-height: 400vh;                 /* Enables scrolling */
+    background-image: url("back_image.svg");
     background-repeat: no-repeat;
-    color: white;
-    min-height: 450px;
-    border-bottom: 50px solid #f8f3e7;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;      /* IMPORTANT */
 }
 
-.hero-content {
-    max-width: 500px;
-}
-
-.hero h1 {
-    font-size: 55px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    margin-bottom: 20px;
-}
-
-.btn {
-    background: #f67b42;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* SNACK PACK IMAGES */
-.hero-images img {
-    position: absolute;
-    width: 200px;
-}
-
-.pack1 { right: 50px; top: 100px; }
-.pack2 { right: 200px; top: 20px; }
-.pack3 { right: 350px; top: 150px; }
-
-/* FEATURES */
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background: #1b7d7b;
-    color: white;
-}
-
-.feature-box {
-    text-align: center;
-    width: 20%;
-}
-
-/* PRODUCTS */
-.products {
-    padding: 60px 40px;
-}
-
-.products h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 40px;
-}
-
-.product-container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.product-card {
-    background: white;
-    padding: 20px;
-    width: 23%;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #ccc;
-    text-align: center;
-}
-
-.product-card img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* INGREDIENTS */
-.ingredients {
-    padding: 60px 40px;
-    background: #ffeaca;
-}
-
-.ingredients h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.filter-box {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-}
-
-.side-products {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.side-card {
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    border-radius: 12px;
-    color: white;
-}
-
-.side-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.orange { background: #f57a21; }
-.yellow { background: #f4c431; }
-
-/* FOOTER */
-footer {
-    background: #0f6f6d;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 40px;
-}
-
-footer input {
-    padding: 10px;
-    width: 200px;
-    border-radius: 5px;
-    border: none;
+/* Empty scroll sections */
+.page{
+    height: 100vh;
 }
