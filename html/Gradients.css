@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+h2{
+    margin:20px auto;
+    text-align: center;
+    font-size:44px;
+    font-weight:900;
+    text-transform: capitalize;
+    font-family:"Lucida sans",'Lucia Sans Regular','Lucida Grande';}
+
+    .container{
+        margin-top: 100px;
+        background:linear-gradient(to left top,gray,pink,green);
+        padding:40px 0;
+
+    }
+
+    h1{
+        text-transform:capitalize;
+        font-size:70px;
+        font-family: Arial,Helvetica,sans-serif;
+        font-weight:700;
+        text-align:center;
+        background: linear-gradient(to right bottom,blue,red,yellow);
+        background-clip: text;
+        color:transparent;
+
+    }
+
+    
