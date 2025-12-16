@@ -1,0 +1,17 @@
+.conic{
+    margin-left:600px;
+    margin-top:200px;
+    width:200px;
+    height:200px;
+    background: conic-gradient(
+        from 0deg at center,
+        red,
+        yellow,
+        green,
+        blue,
+        red
+        );
+        border-radius: 50%;
+        border:2px solid black;
+
+}
