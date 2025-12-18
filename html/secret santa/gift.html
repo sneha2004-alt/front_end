@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🎁 Secret Santa</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    font-family: 'Segoe UI', Arial;
+    background: linear-gradient(135deg,#b31217,#e52d27);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:white;
+}
+
+/* Snow animation */
+.snow{
+    position:fixed;
+    top:-10px;
+    width:6px;
+    height:6px;
+    background:white;
+    border-radius:50%;
+    opacity:0.8;
+    animation: fall linear infinite;
+}
+@keyframes fall{
+    to{
+        transform: translateY(110vh);
+    }
+}
+
+.container{
+    text-align:center;
+    background:rgba(0,0,0,0.35);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+button{
+    font-size:32px;
+    padding:25px 40px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    background:#2ecc71;
+    box-shadow:0 8px #1e8449;
+}
+
+button:active{
+    transform:translateY(5px);
+    box-shadow:0 3px #1e8449;
+}
+
+#result{
+    margin-top:30px;
+    font-size:24px;
+    background:white;
+    color:#000;
+    padding:20px;
+    border-radius:15px;
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🎄 Secret Santa 🎄</h1>
+    <p>Click once to open your gift</p>
+
+    <button onclick="openGift()">🎁 OPEN</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+// Snow creation
+for(let i=0;i<40;i++){
+    let s=document.createElement("div");
+    s.className="snow";
+    s.style.left=Math.random()*100+"vw";
+    s.style.animationDuration=3+Math.random()*5+"s";
+    s.style.opacity=Math.random();
+    s.style.transform=`scale(${Math.random()})`;
+    document.body.appendChild(s);
+}
+
+// Gift logic
+function openGift(){
+    let available = JSON.parse(localStorage.getItem("AVAILABLE_NAMES")) || [];
+    let opened = localStorage.getItem("OPENED");
+
+    if(opened){
+        result.style.display="block";
+        result.innerHTML="❌ You already opened your gift!";
+        return;
+    }
+
+    if(available.length === 0){
+        result.style.display="block";
+        result.innerHTML="❌ All gifts are opened!";
+        return;
+    }
+
+    let name = available.shift();
+    localStorage.setItem("AVAILABLE_NAMES", JSON.stringify(available));
+    localStorage.setItem("OPENED", "YES");
+
+    result.style.display="block";
+    result.innerHTML = "🎉 Your Secret Santa is:<br><b>" + name + "</b>";
+}
+</script>
+
+</body>
+</html>

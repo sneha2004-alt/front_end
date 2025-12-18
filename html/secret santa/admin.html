@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel – Secret Santa</title>
+<style>
+body{
+    font-family: Arial;
+    background:#1e1e1e;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+textarea{
+    width:80%;
+    height:120px;
+    padding:10px;
+}
+button{
+    padding:10px 15px;
+    margin:10px;
+}
+ul{
+    list-style:none;
+    padding:0;
+}
+</style>
+</head>
+<body>
+
+<h2>🎅 Secret Santa Admin Panel</h2>
+
+<p>Enter names (comma OR new line separated)</p>
+
+<textarea id="namesInput" placeholder="Sneha
+Kashish
+Renee
+Shivam
+Suraj
+Abhishek
+Mehfooz Sir"></textarea>
+
+<br>
+<button onclick="addNames()">Add Names</button>
+<button onclick="generate()">Generate & Save</button>
+
+<h3>Names Added:</h3>
+<ul id="list"></ul>
+
+<script>
+let names = JSON.parse(localStorage.getItem("ALL_NAMES")) || [];
+
+function addNames(){
+    let input = namesInput.value.trim();
+    if(!input) return;
+
+    let newNames = input.split(/,|\n/).map(n => n.trim()).filter(n => n);
+
+    names = names.concat(newNames);
+    localStorage.setItem("ALL_NAMES", JSON.stringify(names));
+    namesInput.value = "";
+    show();
+}
+
+function show(){
+    list.innerHTML="";
+    names.forEach(n=>{
+        let li=document.createElement("li");
+        li.textContent=n;
+        list.appendChild(li);
+    });
+}
+
+function generate(){
+    if(names.length===0){
+        alert("Add names first");
+        return;
+    }
+    let shuffled=[...names].sort(()=>Math.random()-0.5);
+    localStorage.setItem("AVAILABLE_NAMES", JSON.stringify(shuffled));
+    localStorage.removeItem("USED_FLAG");
+    alert("✅ Done! Now share gift.html link");
+}
+
+show();
+</script>
+
+</body>
+</html>
