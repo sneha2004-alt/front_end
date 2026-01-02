@@ -1,0 +1,14 @@
+.text {
+    color: tomato;
+    background-color: teal;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    height: 115vh;
+    background-image: url(./utils/free-nature.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid black;
+}

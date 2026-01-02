@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        font-size: italic;
+        margin:0;
+        padding:0;
+        box-sizing: border-box;         
+    }
+    div h1:first-child{
+        color:red;
+    }
+    div>span h1:nth-child(3){
+        color: green;
+    }
+    div h1:nth-child(2){
+        color:purple;
+    }
+      div>span+h1{
+        background-color:gray;
+      }
+
+div+span>*{
+    border:3px dashed tomato;
+    margin:10px 0;
+}
+div+span>h1~p{
+    background: #000;
+    color: tomato;
+}
+      </style>
+</head>
+<body>
+    <div>
+        <span>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+        </span>
+        <h1>helloyyy</h1>
+        <span>
+            <h1>something</h1>
+            <h2>something</h2>
+            <h3>something</h3>
+        </span>
+        <h1>hello2</h1>
+        <h2>hhhhh</h2>
+    </div>
+    <span>
+        <h1>hello</h1>
+        <p>hhhhhh</p>
+        <h2>hello</h2>
+        <p>kkkkkkk</p>
+        <h1>hello</h1>
+    </span>
+    
+</body>
+</html>

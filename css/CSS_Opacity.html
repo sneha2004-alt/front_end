@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opacity</title>
+
+    <style>
+      img {
+        opacity: 0.2;
+        transition: all 0.5s ease-in;
+      }
+
+      img:hover {
+        opacity: 1;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: teal;
+        margin: 150px auto;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      .Box {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        margin: 20px auto;
+        line-height: 100px;
+        text-align: center;
+      }
+
+      .skew-X {
+        transform: skewX(20deg);
+      }
+
+      .skew-Y {
+        transform: skewY(20deg);
+      }
+
+      .skew {
+        transform: skew(40deg, 30deg);
+      }
+      .skew-X:hover {
+        background: purple;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+      }
+
+      .skew-Y:hover {
+        background: red;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+      }
+
+      .skew:hover {
+        background: blue;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="./utils/Cartoon.png" alt="image" />
+
+    <div class="main">
+      <div class="Box skew-X">skew X</div>
+      <div class="Box skew-Y">skew Y</div>
+      <div class="Box skew">skew</div>
+    </div>
+  </body>
+</html>

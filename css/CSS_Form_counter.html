@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* 
+      
+      counter-reset - Creates or resets a counter
+      counter-increment - Increments a counter value
+      content - Inserts generated content
+      counter() or counters() function - Adds the value of a counter to an element
+
+      */
+
+        body {
+            counter-reset: count;
+        }
+
+        /* psudo class  */
+
+        .text:hover {
+            font-size: 64px !important;
+        }
+
+        /* psudo elements  */
+
+        h2::before {
+            counter-increment: count;
+            content: "DATA 😆 " counter(count) " → ";
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- 
+    
+      # counter-reset - Creates or resets a counter
+      # counter-increment - Increments a counter value
+      # content - Inserts generated content
+      # counter() or counters() function - Adds the value of a counter to an element
+    
+    
+    -->
+    <h1 class="text">Using CSS Counters</h1>
+
+    <h2>HTML Tutorial</h2>
+    <h2>CSS Tutorial</h2>
+    <h2>JavaScript Tutorial</h2>
+    <h2>Python Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+    <h2>SQL Tutorial</h2>
+</body>
+
+</html>

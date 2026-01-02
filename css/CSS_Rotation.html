@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotation</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background: blue;
+        text-transform: capitalize;
+        color: #fff;
+        text-align: center;
+        line-height: 200px;
+        margin: 100px auto;
+      }
+
+      .container {
+        border: 5px solid black;
+        width:800pxs;
+        height: auto;
+      }
+
+      .child-1 {
+        transition: transform 1s;
+        transform-style: preserve-3d;
+      }
+
+      .child-1:hover {
+        /* x y z rotate */
+        transform: rotate3d(1, 1, 0, 180deg);
+      }
+
+      .child-2:hover {
+        transition: all 0.3s ease-out;
+      }
+
+      .child-2:hover {
+        transition: all 0.3s ease-in;
+        transform: rotate(360deg);
+      }
+
+      .child-3 {
+        transition: all 0.3s ease-out;
+      }
+      .child-3:hover {
+        transition: all 0.3s ease-in;
+        transform: rotateX(180deg);
+      }
+
+      .child-4 {
+        transition: all 0.3s ease-out;
+      }
+      .child-4:hover{
+        transition: all 0.3s ease-in;
+        transform: rotateY(180deg);
+      }
+      .child-5 {
+        transition: all 1s ease-out;
+      }
+
+     .child-5:hover {
+      transform: rotate(180deg) ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box child-1">Rotate3d</div>
+      <div class="box child-2">Rotate</div>
+      <div class="box child-3">RotateX</div>
+      <div class="box child-4">RotateY</div>
+      <div class="box child-5">RotateZ</div>
+    </div>
+  </body>
+</html>

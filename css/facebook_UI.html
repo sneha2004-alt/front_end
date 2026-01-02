@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook UI Layout</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* // FIX HERE → vertical center */
+        gap: 10px;
+        height: 56px;
+        margin: 20px 10px;
+        padding: 0 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+      }
+
+      section {
+        height: inherit;
+        display: flex;
+        align-items: center; /* // FIX HERE → vertical center */
+        justify-content: center;
+        gap: 15px;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .icon-box {
+        background: #88858575;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        align-items: center; /* // FIX HERE → vertical center */
+        justify-content: center; /* // FIX HERE → horizontal center */
+
+        padding-top: 0%; /* (no need but safe) */
+      }
+
+      .icon-box img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .part-1 {
+        width: 20%;
+        justify-content: start;
+      }
+
+      .part-2 {
+        width: 80%;
+        justify-content: space-between;
+      }
+
+      .part-2 > :first-child {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .part-level-3 {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- LEFT SECTION -->
+      <section class="part-1">
+        <img src="./utils/facebook.png" alt="" />
+
+        <div class="icon-box">
+          <img src="./utils/search.png" alt="" />
+        </div>
+      </section>
+
+      <!-- MIDDLE + RIGHT SECTION WRAPPER -->
+      <section class="part-2">
+        <!-- MIDDLE MENU -->
+        <section class="part-level-1">
+          <img src="./utils/home.png" alt="" />
+          <img src="./utils/flag.png" alt="" />
+          <img src="./utils/video.png" alt="" />
+          <img src="./utils/store.png" alt="" />
+          <img src="./utils/more.png" alt="" />
+        </section>
+
+        <!-- RIGHT SIDE ICONS -->
+        <section class="part-level-3">
+          <div class="icon-box">
+            <img src="./utils/plus.png" alt="" />
+          </div>
+          <div class="icon-box">
+            <img src="./utils/messenger.png" alt="" />
+          </div>
+          <div class="icon-box">
+            <img src="./utils/bell.png" alt="" />
+          </div>
+          <div class="icon-box">
+            <img src="./utils/arrow-down.png" alt="" />
+          </div>
+        </section>
+      </section>
+    </header>
+  </body>
+</html>

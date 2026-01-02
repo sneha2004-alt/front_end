@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table {
+            border: 3px solid gray;
+            padding: 1px;
+        }
+
+        .th,
+        td {
+            border: 1px solid gray;
+        }
+
+        .table1 {
+            border: 3px solid gray;
+            padding: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>without Css</h1>
+    <table border="3">
+        <tr>
+            <th>sr no</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>abhi</th>
+            <th>22</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>shivam</th>
+            <th>22</th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>suraj</th>
+            <th>22</th>
+        </tr>
+    </table>
+
+    <h1>with CSS</h1>
+    <table class="table">
+        <tr class="tr">
+            <th clas="th">sr no</th>
+            <th class="th">name</th>
+            <th class="th">age</th>
+        </tr>
+        <tr class="tr">
+            <td class="td">1</td>
+            <td class="td">abhi</td>
+            <td class="td">22</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">2</td>
+            <td class="td">shivam</td>
+            <td class="td">22</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">3</td>
+            <td class="td">suraj</td>
+            <td class="td">22</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">4</td>
+            <td class="td">sneha</td>
+            <td class="td">22</td>
+        </tr>
+    </table>
+
+
+    <h1>span&col</h1>
+    <thead>
+        <tr>
+            <th class="th1" rowspan="2">Heading</th>
+            <th class="th1">Students</th>
+            <th class="th1" colspan="3">Details</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    <table class="table1">
+       <tr>
+           <th rowspan="2">Heading</th>
+           <th colspan="1">Students</th>
+            <th colspan="3">Details</th>
+        
+       </tr>
+        <tr>
+            <th class="th1">Id</th>
+            <th class="th1">Name</th>
+            <th class="th1">Department</th>
+            <th class="th1">Roll Number</th>
+            <tr>
+                <td class="td1" rowspan="4">Student List</td>
+                <td class="td1">1</td>
+                <td class="td1">Victor</td>
+                <td class="td1">Computer Science</td>
+                <td class="td1">12345</td>
+            </tr>
+    
+            <tr>
+                <td class="td1">2</td>
+                <td class="td1">Williams</td>
+                <td class="td1">Electronics</td>
+                <td class="td1">23456</td>
+            </tr>
+            <tr>
+                <td class="td1">3</td>
+                <td class="td1">harry</td>
+                <td class="td1">Electrical</td>
+                <td class="td1">34567</td>
+            </tr>
+            <tr>
+                <td class="td1">4</td>
+                <td class="td1">Rick</td>
+                <td class="td1">Civil</td>
+                <td class="td1">45678</td>
+            </tr>
+        </tr> 
+        </table>
+
+        <table border="3">
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2">Average</th>
+                <th rowspan="2">Red eyes</th>
+            </tr>
+            <tr>
+                <th>height</th>
+                <th>weight</th>
+            </tr>
+            <tr>
+                <td>Males</td>
+                <td>1.9</td>
+                <td>0.003</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td>Females</td>
+                <td>1.7</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+        </table>
+</body>
+
+</html>
