@@ -4,32 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid</title>
+    <title>Grid Square</title>
+
     <style>
-        .parent {
-            background: teal;
-            border: 1px solid #000;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            /* gap: 20px; */
-            justify-items: center;
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            height: 90vh;
+            background: #222;
+        }
+
+        /* PERFECT SQUARE */
+        .parent {
+            width: min(90vw, 90vh);
+            height: min(90vw, 90vh);
+
+            background: teal;
+            border: 2px solid #000;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+
+            grid-template-areas:
+                "child1 child2 child4"
+                "child3 child3 child5"
+                "child6 child7 .";
         }
 
         .box {
-            width: 50px;
-            height: 50px;
             background: tomato;
             border: 1px solid #fff;
-            text-align: center;
-            line-height: 50px;
             color: #fff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 24px;
+            font-weight: bold;
         }
 
-        .sub-parent {
-            width: 60%;
-        }
+        .child-1 { grid-area: child1; }
+        .child-2 { grid-area: child2; }
+        .child-3 { grid-area: child4; }
+        .child-4 { grid-area: child3; }
+        .child-5 { grid-area: child5; }
+        .child-6 { grid-area: child6; }
+        .child-7 { grid-area: child7; }
     </style>
 </head>
 
@@ -37,12 +66,11 @@
     <div class="parent">
         <div class="box child-1">1</div>
         <div class="box child-2">2</div>
-        <div class="box child-3">3</div>
         <div class="box child-4">4</div>
+        <div class="box child-3">3</div>
         <div class="box child-5">5</div>
         <div class="box child-6">6</div>
         <div class="box child-7">7</div>
-
     </div>
 </body>
 
