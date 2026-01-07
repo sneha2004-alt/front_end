@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispaly all the property</title>
+    <style>
+        /* parent::after{
+            dispaly:block;
+            content:"";
+            clear:both;
+        } */
+
+
+        .parent{
+            border:2px solid red;
+            display:flow-root;
+        }
+        .child{
+            background:tomato;
+            color:teal;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <h1>hello</h1>
+        </div>
+
+    </div>
+    
+</body>
+</html>
