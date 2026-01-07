@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dispaly all the property</title>
     <style>
-        /* parent::after{
+      /* parent::after{
             dispaly:block;
             content:"";
             clear:both;
         } */
 
+      .parent {
+        border: 2px solid red;
+        /* display:flow-root; */
+      }
+      .child {
+        background: tomato;
+        color: teal;
+        /* float:right; */
+      }
 
-        .parent{
-            border:2px solid red;
-            display:flow-root;
-        }
-        .child{
-            background:tomato;
-            color:teal;
-            float:right;
-        }
+      .parent > .child > h1 {
+        color: red;
+      }
+
+      .parent {
+        display: contents;
+      }
+
+      .block {
+        background: green;
+        display: inline;
+      }
+
+      .inline {
+        background: red;
+        display: block;
+      }
+
+      .inline_flex > div{
+        background: tomato;
+      }
+
+      .inline_flex {
+        display: inline-flex;
+        margin: 20px 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="parent">
-        <div class="child">
-            <h1>hello</h1>
-        </div>
-
+      <div class="child">
+        <h1>hello</h1>
+      </div>
     </div>
-    
-</body>
+
+    <!-- inline -->
+
+    <div class="block">hello</div>
+    <h1 class="block">hello</h1>
+    <a class="inline">hello</a>
+
+    <!-- inline flex -->
+
+    <div class="inline_flex">
+      <div>👌</div>
+      <div>like</div>
+    </div>
+  </body>
 </html>
