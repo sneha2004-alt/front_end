@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Square</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #222;
+        }
+
+        .parent {
+            width: min(90vw, 90vh);
+            height: min(90vw, 90vh);
+            background: teal;
+            border: 4px solid #d30a0a;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 20px;
+
+            grid-template-areas:
+                "child1 child1"
+                "child3 child4"
+                "child3 child6"
+                "child7 child7"
+                "child9 child9";
+        }
+
+        .box {
+            background: blue;
+            border: 1px solid #fff;
+            color: #fff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .child-1 { grid-area: child1; }
+    
+        .child-3 { grid-area: child3; }
+        .child-4 { grid-area: child4; }
+        
+        .child-6 { grid-area: child6; }
+        .child-7 { grid-area: child7; }
+    
+        .child-9 { grid-area: child9; }
+        
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box child-1">HEADER</div>
+        
+        <div class="box child-3">ARTICLE</div>
+        <div class="box child-4">TEXT 1</div>
+        
+        <div class="box child-6">TEXT 2</div>
+        <div class="box child-7">MAIN</div>
+       
+        <div class="box child-9">FOOTER</div>
+       
+    </div>
+</body>
+
+</html>
