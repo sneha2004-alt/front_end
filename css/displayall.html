@@ -1,72 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dispaly all the property</title>
-    <style>
-      /* parent::after{
-            dispaly:block;
-            content:"";
-            clear:both;
-        } */
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display all the property</title>
+  <style>
 
-      .parent {
-        border: 2px solid red;
-        /* display:flow-root; */
-      }
-      .child {
-        background: tomato;
-        color: teal;
-        /* float:right; */
-      }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
 
-      .parent > .child > h1 {
-        color: red;
-      }
+    }
+    body>*{
+      background:tomato;
+      border:1px solid #000;
 
-      .parent {
-        display: contents;
-      }
+    }
 
-      .block {
-        background: green;
-        display: inline;
-      }
+    header{
+      height:3em;
+    }
 
-      .inline {
-        background: red;
-        display: block;
-      }
+    header+main{
+      display:flex;
+      height:15em;
+      padding:5px;
+      gap:5px;
+      /* justify-content:center;
+      align-items:center; */
+    }
 
-      .inline_flex > div{
-        background: tomato;
-      }
+    main+main{
+      height:7em;
+    }
 
-      .inline_flex {
-        display: inline-flex;
-        margin: 20px 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="parent">
-      <div class="child">
-        <h1>hello</h1>
-      </div>
-    </div>
+    footer{
+      height:4em;
+    }
 
-    <!-- inline -->
+    /* .sub_child_1, */
+    .sec_1{
+      background:#000 !important;
+      width:100%;
+    }
 
-    <div class="block">hello</div>
-    <h1 class="block">hello</h1>
-    <a class="inline">hello</a>
+    .sec_2{
+      display:flex;
+      gap:5px;
+      flex-direction:column;
+      width:100px;
+    }
+    .sub_child_2{
+      background:wheat;
+      height:100%
+    }
 
-    <!-- inline flex -->
+    .sub_child_1{
+      height:100%;
+      background:plum;
+    }
 
-    <div class="inline_flex">
-      <div>👌</div>
-      <div>like</div>
-    </div>
-  </body>
-</html>
+    main,
+    footer,
+    header{
+      margin :1.5em 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+  <main>
+    <section class="sec1"></section>
+    <section class="sec2">
+      <section class="sub_child_1"></section>
+      <section class="sub_child_2"></section>
+    </section>
+  </main>
+  <main></main>
+  <footer>
+
+  </footer>
+</body>
+</html> 
