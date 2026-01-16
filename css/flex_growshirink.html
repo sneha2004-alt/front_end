@@ -31,6 +31,66 @@
             background:greenyellow;
             flex-grow:1;
         }
+
+        /* this  is containt_2 with flex grow */
+        .box_2{
+            border:2px solid red;
+            text-align:center;
+            width:600px;
+        }
+        .container_2{
+            display:flex;
+            border:2px  solid forestgreen;
+            margin:1rem 0;
+            padding:1rem 0.5em;
+        }
+
+        .one_2{
+            background:red;
+            flex-shrink:1;
+        }
+
+        .two_2{
+            background: teal;
+            width:200px;
+            flex-shrink: 1;
+
+        }
+
+        .three_2{
+            background:yellow;
+            flex-shrink:1;
+        }
+
+        /* this  is containt_2 with flex grow */
+        .box_3{
+            border:2px solid red;
+            text-align:center;
+            width:600px;
+        }
+        .container_3{
+            display:flex;
+            border:2px  solid forestgreen;
+            margin:1rem 0;
+            padding:1rem 0.5em;
+        }
+
+        .one_3{
+            background:red;
+            flex-grow:4;
+            flex-basis:100px;
+        }
+
+        .two_3{
+            background: teal;
+            flex-basis: 200px;
+
+        }
+
+        .three_3{
+            background:yellow;
+            flex-basis:100px;
+        }
     </style>
 </head>
 <body>
@@ -40,5 +100,19 @@
         <div class="box one">one</div>
         <div class="box two">two</div>
         <div class="box three">three</div>
+    </div>
+       <!-- flex shrink|| basic -->
+        <div class="container_2">
+            <div class="box_2 one_2">one</div>
+            <div class="box_2 two_2">two</div>
+            <div class="box_2 three_2">three</div>
+        </div>
+
+        <!-- flex basis|| basic -->
+        <div class="container_2">
+            <div class="box_3 one_3">one</div>
+            <div class="box_3 two_3">two</div>
+            <div class="box_3 three_3">three</div>
+        </div>
 </body>
 </html>
