@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* this  is containt_1 with flex grow */
+        .box{
+            border:2px solid red;
+            text-align:center;
+        }
+        .container{
+            display:flex;
+            border:2px  solid forestgreen;
+        }
+
+        .one{
+            background:teal;
+            flex-grow:1;
+        }
+
+        .two{
+            background: tomato;
+            flex-grow: 2;
+
+        }
+
+        .three{
+            background:greenyellow;
+            flex-grow:1;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+    <!-- flex grow|| basic -->
+    <div class="container">
+        <div class="box one">one</div>
+        <div class="box two">two</div>
+        <div class="box three">three</div>
+</body>
+</html>
