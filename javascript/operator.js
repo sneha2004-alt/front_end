@@ -55,6 +55,8 @@ console.log(name1);
 
 //conditional operators
 
+
+
 //ternary operators
 
 
