@@ -52,6 +52,22 @@ name1=name1 + ' ' + name2;
 console.log(name1);
 
 //conditional/coomparison operators-
+let num1 = 4;
+let num2 ='4';
+
+console.log(nnum1 === num2);
+
+/*
+...the return value in boolean
+= = -> LHS == RHS DATA[VALUE✅,TYPE❌]
+! = -> LHS !== RHS DATA[VALUE✅,TYPE❌]
+===-> LHS === RHS DATA[VALUE✅,TYPE✅]
+
+<
+>
+=<
+>=
+*/
 
 //LOGICAL OPERATOR 
 let flag1 = true;
