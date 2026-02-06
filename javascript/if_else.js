@@ -65,14 +65,16 @@
 // }
 
 //question 5
-let year = 2025;
+// let year = 2025;
 
-let isLeap =
-  (year % 400 === 0) ||
-  (year % 4 === 0 && year % 100 !== 0);
+// let isLeap =
+//   (year % 400 === 0) ||
+//   (year % 4 === 0 && year % 100 !== 0);
 
-if (isLeap) {
-  console.log(year + " is a Leap Year");
-} else {
-  console.log(year + " is NOT a Leap Year");
-}
+// if (isLeap) {
+//   console.log(year + " is a Leap Year");
+// } else {
+//   console.log(year + " is NOT a Leap Year");
+// }
+
+// question 6
