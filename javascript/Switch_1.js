@@ -1,40 +1,52 @@
-const value = undefined;
+// const value = undefined;
 
-switch (null){
-    case true:
-    console.log('yes');
-    break;
+// switch (value) {
+//     case true:
+//         console.log('yes');
+//         break;
 
-    case false:
-        console.log('no');
-        break;
+//     case false:
+//         console.log('no');
+//         break;
+
+//     default:
+//         console.log('please select boolean value true/false');
+// }
+
+// // Normal Function
+// function sumofvalue(a,b,c){
+//     return a + b + c;
+// }
+
+// console.log(sumofvalue(10,7,3));
+
+// // Arrow Function
+// const arrowfunc = (a,b,c) => {
+//     return a + b + c;
+// };
+
+// console.log(arrowfunc(1,2,3));
+
+// Calculator
+function Calc(n1, n2, opts){
+
+    switch(opts){
+        case '+':
+            return n1 + n2;
+
+        case '-':
+            return n1 - n2;
+
+        case '*':
+            return n1 * n2;
+
+        case '/':
+            return n1 / n2;
 
         default:
-            console.log('please select boolean value true/false');
+            return 'please select correct operator!';
+    }
 }
 
-
-
-
-
-
-
-//function's
-/*
-define
-name-convention
-call
- */
-function sumofvalue(a,b,c){
-    console.log(a + b + c);
-    return a + b + c;
-}
-
-console.log(sumofValue(10,7,3));
-
-const aarrowfunc = (a,b,c) =>  {
-    return a + b + c
-}
-
-//const ans = arrowfunc(1,2,3);
-console.log(arrowfunc(1,2,3));
+console.log(Calc(10,5,'+'));
+console.log(Calc(10,5,'*'));
