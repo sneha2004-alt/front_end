@@ -28,9 +28,15 @@
 // console.log(arrowfunc(1,2,3));
 
 // Calculator
-function Calc(n1, n2, opts){
 
-    switch(opts){
+let num_1 = +process.argv[2];
+let num_2 = +process.argv[3];
+let opeartors = process.argv[4];
+
+function Calc(n1, n2, opts){
+    console.log(opts);
+    
+     switch(opts){
         case '+':
             return n1 + n2;
 
@@ -44,9 +50,20 @@ function Calc(n1, n2, opts){
             return n1 / n2;
 
         default:
-            return 'please select correct operator!';
+            return null;
     }
 }
 
-console.log(Calc(10,5,'+'));
-console.log(Calc(10,5,'*'));
+const result = Calc(num_1,num_2,opeartors);
+
+if(result ===null){
+    console.log('please select correct operators!!');
+}else{
+    console.log(Math.abs(result));
+}
+
+const addfunc  =(A,B)=>{
+    return A + B;
+};
+
+console.log(addfunc(num_1,num_2));
