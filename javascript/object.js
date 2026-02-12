@@ -85,18 +85,33 @@ console.log(result);
 
 let start_2 = 1;
 do{
-    console.log('helllo';
+    console.log('helllo');
         start_2++;
-    )
+    
 }
 while(start_2 <=3);
 
 //for in and for of
 
 let object={
-    animal:'',
+    animal:'cat',
+    married:false,
+    age:4,
+    City:["pune","mumbai","lucknow","banglore"],
+    hobbie:{
+        virtual:'pub-g',
+        outDoor:'football',
+        inDoor:'carrom',
+    },
+    myName:function(){
+        console.log(this.animal);
+    }
+};
+for (let key in object){
+    console.log('this is key ${key}this is value',object[key]);
 }
 
+//console.log(array[4].name);
 
 
 
