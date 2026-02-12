@@ -51,7 +51,7 @@
 
 // (10)print the factorial of a given number.
 let num = +process.argv[2];
-let fact=1
+let fact=5
 for (i = 1; i <= num; i++) {
  fact=fact * i;
 }

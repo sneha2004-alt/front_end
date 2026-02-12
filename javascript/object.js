@@ -55,8 +55,47 @@ for(let i=0; i<array.length; i++){
 }
 
 
+//while loop
+//1 to 100
 
+let start=1;
+let end =100;
 
+while(start <= end){
+    //code
+    console.log(start);
+
+    //increrments
+    start++;
+}
+
+let given = 5;
+let start_1 = 1;
+let result =1;
+
+//120
+while (start_1 <= given){
+    result *= start_1;
+    start_1++;
+}
+
+console.log(result);
+
+//do while loop
+
+let start_2 = 1;
+do{
+    console.log('helllo';
+        start_2++;
+    )
+}
+while(start_2 <=3);
+
+//for in and for of
+
+let object={
+    animal:'',
+}
 
 
 
