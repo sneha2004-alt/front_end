@@ -1,21 +1,21 @@
 // // //(1) print number from  1-10 using a LOOP//
-// let arr = [];
-// for (let i = 1; i <= 10; i++) {
-//   arr.push(i);
-// }
+let arr = [];
+for (let i = 1; i <= 10; i++) {
+  arr.push(i);
+}
 
-// for (let j = 0; j < arr.length; j++) {
-//   console.log(arr[j]);
-// }
+for (let j = 0; j < arr.length; j++) {
+  console.log(arr[j]);
+}
 
 // // (2)print all even number number between 1 and 50.& // (3)print all odd number between 1 and 50
-// for (let i = 1; i <= 50; i++) {
-//   if (i % 2 === 0) {
-//     console.log(`this is even number :-${1}`);
-//   } else {
-//     console.log(`this is odd number :-${i}`);
-//   }
-// }
+for (let i = 1; i <= 50; i++) {
+  if (i % 2 === 0) {
+    console.log(`this is even number :-${1}`);
+  } else {
+    console.log(`this is odd number :-${i}`);
+  }
+}
 
 // // (4)print the multiplication table of 5.
 // for (let i = 1; i <= 20; i++) {
@@ -50,9 +50,9 @@
 // }
 
 // (10)print the factorial of a given number.
-let num = +process.argv[2];
-let fact=5
-for (i = 1; i <= num; i++) {
- fact=fact * i;
-}
-console.log(fact)
+// let num = +process.argv[2];
+// let fact=5
+// for (i = 1; i <= num; i++) {
+//  fact=fact * i;
+// }
+// console.log(fact)

@@ -24,7 +24,7 @@
 // }
 
 //question 2
-// let num = 8;   // change this value
+// let num = 8;   
 
 // if (num > 0) {
 //     console.log("Number is Positive");
