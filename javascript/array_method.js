@@ -97,8 +97,8 @@ console.log(ansofArr);
 
 let quest_2 = ["mango", "apple", "kiwi", "orange", "guava", "lichi", "pineapple", "banana", "banana", "banana", "mango", "apple", "kiwi", "orange", "guava", "lichi", "pineapple"]
 
-const ans44 = arr1.foreach((el,i,arr) =>{
-    if (el %2 ===0){
+const ans44 = arr1.forEach((el,i,arr) =>{
+    if (el %2 === 0){
         console.log(`this is even number ${el}`)
     }
     else{
