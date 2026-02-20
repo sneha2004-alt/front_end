@@ -54,9 +54,9 @@ console.log(palindromes);
 
 
 //8. From a list of students with marks, keep only those who passed. 
-let numbers4 = [1, 2, 2, 3, 4, 4, 5];
+let numbers5 = [1, 2, 2, 3, 4, 4, 5];
 
-let uniqueNumbers = numbers4.filter((num, index, arr) =>
+let uniqueNumbers5 = numbers4.filter((num, index, arr) =>
   arr.indexOf(num) === index
 );
 
