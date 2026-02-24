@@ -1,3 +1,4 @@
+// *
 let array=[1,2,3,4,4];
 let string ='hello';
 let object = {
@@ -53,3 +54,5 @@ Array.prototype.nikalo = function () {
     this.length = lastIndex;  
     return value;
 };
+//
+
