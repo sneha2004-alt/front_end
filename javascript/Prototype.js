@@ -41,10 +41,15 @@ Array.prototype.dhakelo = function (value) {
 arr1.dhakelo(7);
 
 console.log(arr1);
+//pop
 
-let arr = [10,20,30,40];
 
-let popped = arr.nikalo();
+Array.prototype.nikalo = function () {
+    if (this.length === 0) return undefined;
 
-console.log(popped); 
-console.log(arr);   
+    let lastIndex = this.length - 1;
+    let value = this[lastIndex];
+
+    this.length = lastIndex;  
+    return value;
+};
