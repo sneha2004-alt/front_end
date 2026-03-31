@@ -67,3 +67,16 @@ const addfunc  =(A,B)=>{
 };
 
 console.log(addfunc(num_1,num_2));
+
+
+
+
+
+
+
+
+
+
+      
+     
+      
